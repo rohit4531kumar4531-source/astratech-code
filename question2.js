@@ -1,6 +1,11 @@
-const num = 1;
 for (let i = 1; i <= 100; i++) {
-  if (i % 2 == 1) {
-    console.log(i);
+  let count = 0;
+  for (let j = 1; j <= i; j++) {
+    if (i % j == 0) {
+      count++;
+    }
+  }
+  if (count == 2) {
+    console.log(i, "is prime");
   }
 }
